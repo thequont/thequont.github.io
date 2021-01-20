@@ -57,6 +57,12 @@
                   BITCOIN
                 </a>
               </li>
+<li class="nav-item">
+                <a class="nav-link" href="index.html#eth">
+                  <span data-feather="bar-chart-2"></span>
+                  ETHEREUM
+                </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html#reef">
                   <span data-feather="bar-chart-2"></span>
@@ -83,17 +89,14 @@
 <script>
 let array = [];
 let eachEverySeconds = 5;
-var totalbtc;
-var profitbtc;
-var profitpercentbtc;
+var start = 3000.00;
 
-var totalamount;
-var GBPpounds= 0.00;
-var BTCpounds = 2000.00;
-var totalprofit;
-var takehome;
-var percentreturn;
-var USDT = 0.00;
+
+var GBP = 0.00;
+var BTC = 0.08057084;
+var btcamount =0.12503719;
+
+var USDT = 1552.45;
 var USDTGBP = 1000.00;
 
 function fetchCoinPrice(params) {
@@ -104,23 +107,22 @@ function fetchCoinPrice(params) {
     .then(data => {
         array.push(data.price)
         console.log("tmpArray", array[array.length-1]);
-        totalbtc = ((array[array.length-1])*0.08057084).toFixed(2);
+	btcamount_ = btcamount + " BTC";
+        totalbtc = ((array[array.length-1])* btcamount).toFixed(2);
 	totalbtc_ = "£ " + totalbtc;
-        profitbtc = (totalbtc - BTCpounds).toFixed(2);
-	profitpercentbtc = ((profitbtc / BTCpounds) *100).toFixed(2) + " %";
+        profitbtc = (totalbtc - start).toFixed(2);
+	profitpercentbtc = ((profitbtc / start) *100).toFixed(2);
+	profitpercentbtc_ = profitpercentbtc + "%";
 	profitbtc_ = "£ " + profitbtc;
-	GBPpounds_ = "£ " + GBPpounds.toFixed(2);
-	BTCpounds_ = "£ " + BTCpounds.toFixed(2);
-	totalamount =  (+GBPpounds + +BTCpounds).toFixed(2);
- 	totalamount_ = "£ " + totalamount;
-	totalprofit = profitbtc;
-	totalprofit_ = "£ " + totalprofit;
-	percentreturn = ((totalprofit / totalamount)*100).toFixed(2);
+	return1 = ((array[array.length-1])* 0.08057084).toFixed(2);
+	return2 = (return1-2000.00).toFixed(2);
+	return2_ = "£" + return2;
+	percentreturn = ((return2 / 2000.00)*100).toFixed(2);
 	percentreturn_ = percentreturn + " %";
-	takehome = (+totalamount + +totalprofit + +USDTGBP);
-	takehome_ = "£ " + takehome;
-	USDT_ = "(" + USDT + " USDT" + ")";
-	USDTGBP_ = "£ " + USDTGBP
+	USDT_ = USDT + " USDT";
+	BTC_ = BTC + " BTC";
+	
+	
 	
     }); 
 }
@@ -129,19 +131,16 @@ fetchCoinPrice();
 setInterval(fetchCoinPrice, eachEverySeconds * 1000);
 
 function sendData(){
-	document.getElementById("TotalProfit").innerHTML=totalprofit_,
-	document.getElementById("TotalPercentReturn").innerHTML=percentreturn_,
-	document.getElementById("TotalTakeHome").innerHTML=takehome_,
-	document.getElementById("BTCpounds").innerHTML=BTCpounds_,
+	document.getElementById("btcamount").innerHTML=btcamount_,
 	document.getElementById("USDT").innerHTML=USDT_,
   	document.getElementById("TotalBTC").innerHTML=totalbtc_,
   	document.getElementById("ProfitBTC").innerHTML=profitbtc_,
-  	document.getElementById("ProfitPercentBTC").innerHTML=profitpercentbtc,
- 	document.getElementById("TotalAmountInvested").innerHTML=totalamount_,
-	document.getElementById("USDTGBP").innerHTML=USDGBP_
-	
-	
- 	
+  	document.getElementById("ProfitPercentBTC").innerHTML=profitpercentbtc_,
+	document.getElementById("BTC").innerHTML=BTC_,
+	document.getElementById("Return").innerHTML=return2_,
+        document.getElementById("PercentReturn").innerHTML=percentreturn_,
+	document.getElementById("USDT").innerHTML=USDT_
+ 
 
 }setInterval(sendData)
 
@@ -159,15 +158,20 @@ function sendData(){
 <div class="card-body">
           
             <ul class="list-unstyled mt-3 mb-4">
-		<li>Total: <b>£ 3000.00
-</b></li>
-<br>
-<li>Unrealised Profit: <b><div id="TotalProfit">
+		<li>Original Investment: <b>£ 3000.00
+</b><br>
+a/c value: <b><div id="btcamount">
     This text will change
-</div></b> <b><div id="TotalPercentReturn">
+</div></b>
+
+</li>
+<br>
+<li>Unrealised Profit: <b><div id="ProfitBTC">
+    This text will change
+</div></b> <b><div id="ProfitPercentBTC">
     This text will change
 </div></b></li><br>
-<li>Take Home: <b><div id="TotalTakeHome">
+<li>Take Home: <b><div id="TotalBTC">
     This text will change
 </div></b></li><br> 
 		
@@ -182,7 +186,7 @@ function sendData(){
 <br>
 
 
-
+<div class="container">
 <h3> Breakdown</h3><br>
 <h4 align="center"> Coins</h4><br><br>
 
@@ -209,23 +213,36 @@ function sendData(){
   </script>
 </div>
 <!-- TradingView Widget END -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "COINBASE:BTCGBP",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
        
 
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Stake: <b><div id="BTCpounds">
-    This text will change
-</div>(0.08057084 BTC)</b></li>
-		<br>
-		
-<li>Unrealised Profit: <b><div id="ProfitBTC">
-    This text will change
-</div></b>
-     <b><div id="ProfitPercentBTC">
-    This text will change
-</div></b></li> 
-<li> Take Home:<b><div id="TotalBTC">
+              <li>Stake: <b><div id="BTC">
     This text will change
 </div></b></li>
+		<br>
+		
+<li>Unrealised Profit: <b><div id="Return">
+    This text will change
+</div></b>
+     <b><div id="PercentReturn">
+    This text will change
+</div></b></li> 
+
              
             </ul>
            
@@ -256,10 +273,12 @@ function sendData(){
 <!-- TradingView Widget END -->
   
          <ul class="list-unstyled mt-3 mb-4">
-             <li>Stake: <br><b>£ 0.00</b>
+             <li>Stake: 
 <b><div id="USDT">
     This text will change
 </div></b></li>
+<br><br>
+<li>- Looking to BUY BTC ($32000) or ETH ($1200) with with USDT total</li>
 		
             </ul>
            
@@ -304,12 +323,12 @@ function sendData(){
 <!-- TradingView Widget END -->
   
          <ul class="list-unstyled mt-3 mb-4">
-             <li>Stake: <br><b>£ 1000.00</b><br>
+             <li>Stake: <br>
 
-<b>76,533.39 REEF</b>
+<b>0 REEF</b>
 
 </li>
-<li><b>Profit: </b></li>
+
 		
             </ul>
            
@@ -318,14 +337,48 @@ function sendData(){
 
 <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">TBC</h4>
+            <h4 class="my-0 font-weight-normal">Ethereum</h4>
           </div>
           <div class="card-body" align="center">
-
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:ETHUSDT",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "COINBASE:ETHGBP",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
   
-         <ul class="list-unstyled mt-3 mb-4">
-             <li></li>
+        <ul class="list-unstyled mt-3 mb-4">
+             <li>Stake: <br>
+
+<b>0</b>
+
+</li>
+
 		
             </ul>
            
@@ -341,6 +394,8 @@ function sendData(){
 <p>
 
 <ul>
+<li>SOLD 76,533.39 REEF @ 1552.45 USDT</li>
+
 <li>76,533.39 REEF bought with 1311.38 USDT</li>
 <li> UPDATE: 1313.3810112 USDT, 0.08057084 BTC
 <li>0.03734400 BTC converted to 1313.3810112 USDT (1 BTC = 35169.8 USDT)</li>
@@ -390,6 +445,35 @@ function sendData(){
 <!-- TradingView Widget END -->
 </div>
 
+<h4 align="center" id="eth">ETH</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_fa11c"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+ "width": "100%",
+   "height":"600",
+  "symbol": "COINBASE:ETHUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "hide_top_toolbar": true,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_fa11c"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<br><br><br>
+
 <h4 align="center" id="reef">REEF</h4><br>
 <div class="container">
 <!-- TradingView Widget BEGIN -->
@@ -418,10 +502,6 @@ function sendData(){
 }
   );
   </script>
-</div><br><br><br>
-<!-- TradingView Widget END -->
-</div><br><br>
-   
 
 </div><br><br>
 
