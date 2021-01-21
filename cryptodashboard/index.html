@@ -114,10 +114,10 @@ function fetchCoinPrice(params) {
 	profitpercentbtc = ((profitbtc / start) *100).toFixed(2);
 	profitpercentbtc_ = profitpercentbtc + "%";
 	profitbtc_ = "£ " + profitbtc;
-	return1 = ((array[array.length-1])* 0.08057084).toFixed(2);
-	return2 = (return1-2000.00).toFixed(2);
+	return1 = ((array[array.length-1])* btcamount).toFixed(2);
+	return2 = (return1-3000.00).toFixed(2);
 	return2_ = "£" + return2;
-	percentreturn = ((return2 / 2000.00)*100).toFixed(2);
+	percentreturn = ((return2 / 3000.00)*100).toFixed(2);
 	percentreturn_ = percentreturn + " %";
 	USDT_ = USDT + " USDT";
 	BTC_ = BTC + " BTC";
