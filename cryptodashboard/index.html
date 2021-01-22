@@ -93,10 +93,10 @@ var start = 3000.00;
 
 
 var GBP = 0.00;
-var BTC = 0.08057084;
-var btcamount =0.12503719;
+var BTC = 0.06421299;
+var btcamount =0.12859038;
 
-var USDT = 0.00;
+var USDT = 0;
 var USDTGBP = 1000.00;
 
 function fetchCoinPrice(params) {
@@ -114,8 +114,8 @@ function fetchCoinPrice(params) {
 	profitpercentbtc = ((profitbtc / start) *100).toFixed(2);
 	profitpercentbtc_ = profitpercentbtc + "%";
 	profitbtc_ = "£ " + profitbtc;
-	return1 = ((array[array.length-1])* btcamount).toFixed(2);
-	return2 = (return1-3000.00).toFixed(2);
+	return1 = ((array[array.length-1]) * btcamount).toFixed(2);
+	return2 = (return1 - start).toFixed(2);
 	return2_ = "£" + return2;
 	percentreturn = ((return2 / 3000.00)*100).toFixed(2);
 	percentreturn_ = percentreturn + " %";
@@ -231,17 +231,11 @@ a/c value: <b><div id="btcamount">
        
 
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Stake: <b><div id="BTC">
-    This text will change
-</div></b></li>
+              <li>Stake: <b>0.12859038 BTC</b>
+   </li>
 		<br>
 		
-<li>Unrealised Profit: <b><div id="Return">
-    This text will change
-</div></b>
-     <b><div id="PercentReturn">
-    This text will change
-</div></b></li> 
+
 
              
             </ul>
@@ -278,7 +272,6 @@ a/c value: <b><div id="btcamount">
     This text will change
 </div></b></li>
 <br><br>
-<li>- Looking to BUY BTC ($32000) or ETH ($1200) with with USDT total</li>
 		
             </ul>
            
