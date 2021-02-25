@@ -37,16 +37,12 @@
                 </a>
               </li>
 
+<!--
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>History</span>
               
-            </h6>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#log">
-                  <span data-feather="bar-chart-2"></span>
-                  TRANSACTION LOG
-                </a>
-              </li>
+            </h6> -->
+              
      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Charts</span>
               
@@ -54,19 +50,49 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html#charts">
                   <span data-feather="bar-chart-2"></span>
-                  BITCOIN
+                  BTC
                 </a>
               </li>
 <li class="nav-item">
-                <a class="nav-link" href="index.html#eth">
+                <a class="nav-link" href="index.html#ETH">
                   <span data-feather="bar-chart-2"></span>
-                  ETHEREUM
+                  ETH
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html#reef">
+                <a class="nav-link" href="index.html#REEF">
                   <span data-feather="bar-chart-2"></span>
-                  REEF/USDT
+                  REEF
+                </a>
+              </li>
+ <li class="nav-item">
+                <a class="nav-link" href="index.html#LINK">
+                  <span data-feather="bar-chart-2"></span>
+                  LINK
+                </a>
+              </li>
+ <li class="nav-item">
+                <a class="nav-link" href="index.html#EOS">
+                  <span data-feather="bar-chart-2"></span>
+                  EOS
+                </a>
+              </li>
+ <li class="nav-item">
+                <a class="nav-link" href="index.html#DOGE">
+                  <span data-feather="bar-chart-2"></span>
+                  DOGE
+                </a>
+              </li>
+ <li class="nav-item">
+                <a class="nav-link" href="index.html#TRX">
+                  <span data-feather="bar-chart-2"></span>
+                  TRX
+                </a>
+              </li>
+ <li class="nav-item">
+                <a class="nav-link" href="index.html#DOT">
+                  <span data-feather="bar-chart-2"></span>
+                  DOT
                 </a>
               </li>
              
@@ -93,11 +119,11 @@ var start = 3000.00;
 
 
 var GBP = 0.00;
-var BTC = 0.06421299;
-var btcamount =0.12859038;
+var BTC = 0.000;
+var btcamount =0.10905;
 
 var USDT = 0;
-var USDTGBP = 1000.00;
+var USDTGBP = 0;
 
 function fetchCoinPrice(params) {
   fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCGBP')
@@ -195,7 +221,7 @@ a/c value: <b><div id="btcamount">
 
 <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Bitcoin</h4>
+            <h4 class="my-0 font-weight-normal">BTC</h4>
           </div>
 <div class="card-body" align="center">
 <!-- TradingView Widget BEGIN -->
@@ -204,7 +230,7 @@ a/c value: <b><div id="btcamount">
   <div class="tradingview-widget-copyright"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
-  "symbol": "BINANCE:BTCUSDT",
+  "symbol": "BINANCE:BTCUSD",
   "width": "100%",
   "colorTheme": "light",
   "isTransparent": false,
@@ -219,7 +245,7 @@ a/c value: <b><div id="btcamount">
   <div class="tradingview-widget-copyright"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
-  "symbol": "COINBASE:BTCGBP",
+  "symbol": "BINANCE:BTCGBP",
   "width": "100%",
   "colorTheme": "light",
   "isTransparent": false,
@@ -231,7 +257,7 @@ a/c value: <b><div id="btcamount">
        
 
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Stake: <b>0.12859038 BTC</b>
+              <li>Stake: <br><b>0.045 BTC</b>
    </li>
 		<br>
 		
@@ -245,19 +271,18 @@ a/c value: <b><div id="btcamount">
         </div>
 
 <div class="card mb-4 box-shadow">
- 	<div class="card-header">
-            <h4 class="my-0 font-weight-normal">USDT</h4>
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">ETH</h4>
           </div>
-<div class="card-body" align="center">
-
+          <div class="card-body" align="center">
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
-  "symbol": "FTX:USDTUSD",
- "width": "100%",
+  "symbol": "BINANCE:ETHUSD",
+  "width": "100%",
   "colorTheme": "light",
   "isTransparent": false,
   "locale": "uk"
@@ -265,18 +290,37 @@ a/c value: <b><div id="btcamount">
   </script>
 </div>
 <!-- TradingView Widget END -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:ETHGBP",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
   
-         <ul class="list-unstyled mt-3 mb-4">
-             <li>Stake: 
-<b><div id="USDT">
-    This text will change
-</div></b></li>
-<br><br>
+        <ul class="list-unstyled mt-3 mb-4">
+             <li>Stake: <br>
+
+<b>0.10818171 ETH</b>
+
+</li>
+
 		
             </ul>
            
- </div>
- </div>
+</div>
+</div>
+
+
 
 </div>
 </div>
@@ -295,7 +339,7 @@ a/c value: <b><div id="btcamount">
 
  <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">REEF/USDT</h4>
+            <h4 class="my-0 font-weight-normal">REEF</h4>
           </div>
  <div class="card-body" align="center">
 
@@ -305,7 +349,7 @@ a/c value: <b><div id="btcamount">
   <div class="tradingview-widget-copyright"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
-  "symbol": "BINANCE:REEFUSDT",
+  "symbol": "BINANCE:REEFUSD",
  "width": "100%",
   "colorTheme": "light",
   "isTransparent": false,
@@ -318,7 +362,7 @@ a/c value: <b><div id="btcamount">
          <ul class="list-unstyled mt-3 mb-4">
              <li>Stake: <br>
 
-<b>0 REEF</b>
+<b>11,805.573 REEF</b>
 
 </li>
 
@@ -329,77 +373,195 @@ a/c value: <b><div id="btcamount">
 </div>
 
 <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Ethereum</h4>
+ 	<div class="card-header">
+            <h4 class="my-0 font-weight-normal">DOGE</h4>
           </div>
-          <div class="card-body" align="center">
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "BINANCE:ETHUSDT",
-  "width": "100%",
-  "colorTheme": "light",
-  "isTransparent": false,
-  "locale": "uk"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "COINBASE:ETHGBP",
-  "width": "100%",
-  "colorTheme": "light",
-  "isTransparent": false,
-  "locale": "uk"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+<div class="card-body" align="center">
 
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:DOGEUSD",
+ "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
   
-        <ul class="list-unstyled mt-3 mb-4">
-             <li>Stake: <br>
-
-<b>0</b>
-
-</li>
-
+         <ul class="list-unstyled mt-3 mb-4">
+             <li>Stake: 
+<br><b>7815.7764 DOGE</b></li>
+<br><br>
 		
             </ul>
            
-</div>
-</div>
+ </div>
+ </div>
 
 </div>
 </div>
+
+
+
+<div class="container">
+<div class="card-deck mb-3 text-center">
+
+<div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">EOS</h4>
+          </div>
+<div class="card-body" align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:EOSUSD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+
+       
+
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Stake: <br><b>82.02789 EOS</b>
+   </li>
+		<br>
+		
+
+
+             
+            </ul>
+           
+          </div>
+<br>
+        </div>
+
+<div class="card mb-4 box-shadow">
+ 	<div class="card-header">
+            <h4 class="my-0 font-weight-normal">DOT</h4>
+          </div>
+<div class="card-body" align="center">
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:DOTUSD",
+ "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+  
+         <ul class="list-unstyled mt-3 mb-4">
+             <li>Stake: 
+<br><b>17.99199 DOT</b></li>
+<br><br>
+		
+            </ul>
+           
+ </div>
+ </div>
+
+</div>
+</div>
+
+<div class="container">
+<div class="card-deck mb-3 text-center">
+
+<div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">LINK</h4>
+          </div>
+<div class="card-body" align="center">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:LINKUSD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+
+       
+
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Stake: <br><b>33.365601 LINK</b>
+   </li>
+		<br>
+		
+
+
+             
+            </ul>
+           
+          </div>
+<br>
+        </div>
+
+<div class="card mb-4 box-shadow">
+ 	<div class="card-header">
+            <h4 class="my-0 font-weight-normal">TRX</h4>
+          </div>
+<div class="card-body" align="center">
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "BINANCE:TRXUSD",
+ "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "uk"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+  
+         <ul class="list-unstyled mt-3 mb-4">
+             <li>Stake: 
+<br><b>7603.4889 TRX</b></li>
+<br><br>
+		
+            </ul>
+           
+ </div>
+ </div>
+
+</div>
+</div>
+
+
+
 
 <br>
-<div class="container">
-<h3 id="log">Transaction Log</h3><br>
-<p>
 
-<ul>
-<li>SOLD 76,533.39 REEF @ 1552.45 USDT</li>
-
-<li>76,533.39 REEF bought with 1311.38 USDT</li>
-<li> UPDATE: 1313.3810112 USDT, 0.08057084 BTC
-<li>0.03734400 BTC converted to 1313.3810112 USDT (1 BTC = 35169.8 USDT)</li>
-<li>Bought £1000 = 0.03734400 BTC (BINANCE)</li>
-<li>Bought £1000 = 0.03646000 BTC (BINANCE)</li>
-<li>Bought £500 = 0.04411084 BTC (COINBASE)</li>
-
-</ul>
-</p>
-</div>
-<br><br><br>
  
 <div class="container">
 
@@ -418,7 +580,7 @@ a/c value: <b><div id="btcamount">
   {
   "width": "100%",
    "height":"600",
-  "symbol": "COINBASE:BTCUSD",
+  "symbol": "BINANCE:BTCUSD",
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "light",
@@ -438,7 +600,7 @@ a/c value: <b><div id="btcamount">
 <!-- TradingView Widget END -->
 </div>
 
-<h4 align="center" id="eth">ETH</h4><br>
+<h4 align="center" id="ETH">ETH</h4><br>
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div id="tradingview_fa11c"></div>
@@ -449,7 +611,7 @@ a/c value: <b><div id="btcamount">
   {
  "width": "100%",
    "height":"600",
-  "symbol": "COINBASE:ETHUSD",
+  "symbol": "BINANCE:ETHUSD",
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "light",
@@ -467,11 +629,10 @@ a/c value: <b><div id="btcamount">
 <!-- TradingView Widget END -->
 <br><br><br>
 
-<h4 align="center" id="reef">REEF</h4><br>
-<div class="container">
+<h4 align="center" id="REEF">REEF</h4><br>
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-  <div id="tradingview_f7642"></div>
+  <div id="tradingview_d4e36"></div>
   
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
   <script type="text/javascript">
@@ -479,7 +640,7 @@ a/c value: <b><div id="btcamount">
   {
 "width": "100%",
    "height":"600",
-  "symbol": "BINANCE:REEFUSDT",
+  "symbol": "BINANCE:REEFUSD",
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "light",
@@ -491,12 +652,183 @@ a/c value: <b><div id="btcamount">
   "show_popup_button": true,
   "popup_width": "1200",
   "popup_height": "1000",
-  "container_id": "tradingview_f7642"
+  "container_id": "tradingview_d4e36"
 }
   );
   </script>
 
-</div><br><br>
+<br><br><br>
+
+<h4 align="center" id="DOGE">DOGE</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_030fe"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+"width": "100%",
+   "height":"600",
+  "symbol": "BINANCE:DOGEUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "save_image": false,
+  "show_popup_button": true,
+  "popup_width": "1200",
+  "popup_height": "1000",
+  "container_id": "tradingview_030fe"
+}
+  );
+  </script>
+
+<br><br><br>
+
+<h4 align="center" id="LINK">LINK</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_d3c96"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+"width": "100%",
+   "height":"600",
+  "symbol": "BINANCE:LINKUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "save_image": false,
+  "show_popup_button": true,
+  "popup_width": "1200",
+  "popup_height": "1000",
+  "container_id": "tradingview_d3c96"
+}
+  );
+  </script>
+
+<br><br><br>
+
+<h4 align="center" id="TRX">TRX</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_dfce4"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+"width": "100%",
+   "height":"600",
+  "symbol": "BINANCE:TRXUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "save_image": false,
+  "show_popup_button": true,
+  "popup_width": "1200",
+  "popup_height": "1000",
+  "container_id": "tradingview_defc4"
+}
+  );
+  </script>
+
+<br><br><br>
+
+<h4 align="center" id="EOS">EOS</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_855a4"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+"width": "100%",
+   "height":"600",
+  "symbol": "BINANCE:EOSUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "save_image": false,
+  "show_popup_button": true,
+  "popup_width": "1200",
+  "popup_height": "1000",
+  "container_id": "tradingview_855a4"
+}
+  );
+  </script>
+
+<br><br><br>
+
+<h4 align="center" id="DOT">DOT</h4><br>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_51b67"></div>
+  
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+"width": "100%",
+   "height":"600",
+  "symbol": "BINANCE:DOTUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "uk",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "save_image": false,
+  "show_popup_button": true,
+  "popup_width": "1200",
+  "popup_height": "1000",
+  "container_id": "tradingview_51b67"
+}
+  );
+  </script>
+</div>
+</div>
+
+</div><br><br><br><br>
+<!--
+<div class="container">
+<h3 id="log">Transaction Log</h3><br>
+<p>
+
+<ul>
+<li>SOLD 76,533.39 REEF @ 1552.45 USDT</li>
+
+<li>76,533.39 REEF bought with 1311.38 USDT</li>
+<li> UPDATE: 1313.3810112 USDT, 0.08057084 BTC
+<li>0.03734400 BTC converted to 1313.3810112 USDT (1 BTC = 35169.8 USDT)</li>
+<li>Bought £1000 = 0.03734400 BTC (BINANCE)</li>
+<li>Bought £1000 = 0.03646000 BTC (BINANCE)</li>
+<li>Bought £500 = 0.04411084 BTC (COINBASE)</li>
+
+</ul>
+</p>
+</div>
+<br><br><br>
 
 <div class="container">
 <h3 id="log">Todo</h3><br>
@@ -510,7 +842,7 @@ a/c value: <b><div id="btcamount">
 </ul>
 </p>
 </div>
-<br><br><br>
+<br><br><br>  -->
 
         </main><br><br><br>
       </div>
